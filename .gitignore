@@ -1,0 +1,50 @@
+# Build
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ASP.NET Core / Entity Framework
+artisans.db
+appsettings.Development.json
+
+# Logs
+*.log
+
+# Compiled DLLs
+*.dll
+*.exe
+*.pdb
+
+# Package folders
+packages/
+.nuget/
+
+# VS Code settings
+.vscode/
+
+# Dotnet tools
+*.swp
+*.bak
+
+# Others
+*.db-shm
+*.db-wal
+
+# Node/npm if you add frontend stuff later
+node_modules/
+
+# OS files
+Thumbs.db
+.DS_Store

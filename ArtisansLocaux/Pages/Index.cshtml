@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+<h1>Artisans Locaux</h1>
+<div>
+    @foreach (var artisan in Model.Artisans)
+    {
+        <div>
+            <img src="@artisan.ImageUrl" width="200" />
+            <h2>@artisan.Name</h2>
+            <p>@artisan.Bio</p>
+        </div>
+    }
+</div>
