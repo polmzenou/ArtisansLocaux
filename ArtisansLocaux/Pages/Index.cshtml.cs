@@ -1,24 +1,19 @@
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using ArtisansLocaux.Data;
 using ArtisansLocaux.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ArtisansLocaux.Pages
+public class IndexModel : PageModel
 {
-    public class IndexModel : PageModel
+    private readonly ApplicationDbContext _context;
+    public List<Artisan> Artisans { get; set; } = new();
+
+    public IndexModel(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _context;
+        _context = context;
+    }
 
-        public required List<Artisan> Artisans { get; set; }
-
-        public IndexModel(ApplicationDbContext context)
-        {
-            _context = context;
-        }
-
-        public void OnGet()
-        {
-            Artisans = _context.Artisans.ToList();
-        }
+    public void OnGet()
+    {
+        Artisans = _context.Artisans.ToList();
     }
 }
